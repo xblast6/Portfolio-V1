@@ -1,0 +1,126 @@
+html, body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+h3 {
+    color: black;
+}
+
+p {
+    color: rgb(102, 101, 101);
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-copertina {
+    height: 30vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.rosso {
+    background-color: #ff0000;
+    height: 55%;
+}
+
+.container-img-copertina {
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    padding: 0.2em;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.315);
+    border-radius: 5pt;
+}
+
+.container-img-copertina img {
+    height: 180px;
+    width: 180px;
+    border-radius: 5pt;
+}
+
+.container-testo-copertina {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding-bottom: 1em;
+    z-index: 10;
+}
+
+.container-testo-copertina h1{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.container-testo-copertina h4{
+    font-size: 0.8em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1.5em;
+}
+
+.container-view-piattaforma {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f8f9;
+    padding: 1em;
+    border-radius: 5pt;
+}
+
+.link ion-icon {
+    color: black;
+    font-size: 1em;
+}
+
+.container-logo-piattaforma {
+    height: 1.8em;
+    width: 2.5em;
+    border-radius: 50%;
+}
+
+.container-logo-piattaforma img{
+    height: auto;
+    width: 2.5em;
+}
+
+.container-testo-piattaforma {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

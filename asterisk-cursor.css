@@ -1,0 +1,20 @@
+/* Blast's Asterisk cursor: no central dot, no input interception. */
+.blast-cursor-layer{position:fixed;inset:0;z-index:10000;pointer-events:none;overflow:hidden;display:none}
+html.blast-cursor-active .blast-cursor-layer{display:block}
+html.blast-cursor-active,html.blast-cursor-active *{cursor:none!important}
+.blast-cursor{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none}
+.blast-cursor-shape{position:absolute;width:38px;height:38px;left:-19px;top:-19px;display:grid;place-items:center;scale:1;transition:scale .18s ease-out}
+.blast-cursor-symbol{display:block;color:#ddfa43;font:38px/1 Arial,sans-serif;text-shadow:0 1px 2px #141414,0 0 1px #141414;transform-origin:center;transition:transform .2s ease-out}
+.blast-cursor.is-hovering .blast-cursor-symbol{animation:blast-cursor-orbit 2.4s linear infinite}
+.blast-cursor.is-pressed .blast-cursor-shape{scale:.65}
+.blast-cursor.is-pressed .blast-cursor-symbol{animation-duration:.35s}
+.blast-cursor-burst{position:absolute;width:0;height:0;pointer-events:none}
+.blast-cursor-burst i{position:absolute;left:0;top:0;display:block;color:#ddfa43;font:19px/1 Arial,sans-serif;text-shadow:0 1px 2px #141414;animation:blast-cursor-constellation .8s cubic-bezier(.16,.7,.3,1) both}
+.blast-cursor-burst i:nth-child(even){font-size:12px}
+@keyframes blast-cursor-orbit{from{transform:rotate(0deg) scale(1.4)}to{transform:rotate(360deg) scale(1.4)}}
+@keyframes blast-cursor-constellation{0%{opacity:1;transform:translate(-50%,-50%) rotate(0deg) scale(.25)}60%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--star-x)),calc(-50% + var(--star-y))) rotate(var(--star-turn)) scale(.5)}}
+.paused .blast-cursor-symbol{animation:none!important}
+.paused .blast-cursor-shape{transition:none;scale:1!important}
+.paused .blast-cursor-burst{display:none}
+@media(prefers-reduced-motion:reduce){.blast-cursor-symbol{animation:none!important;transition:none}.blast-cursor-shape{transition:none;scale:1!important}.blast-cursor-burst{display:none}}
+@media(forced-colors:active){html.blast-cursor-active,html.blast-cursor-active *{cursor:auto!important}.blast-cursor-layer{display:none!important}}
