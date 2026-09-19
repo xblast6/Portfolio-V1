@@ -1,11 +1,10 @@
 const projects = {
  cinema:{name:'LightFocusCinema',category:'CINEMA / SVILUPPO WEB',image:'assets/lightfocuscinema-logo.webp',description:'Uno spazio digitale per il cinema indipendente. Il sito presenta produzioni, servizi, eventi e il team di LightFocusCinema, con una direzione visiva cinematografica e contenuti in italiano e inglese.',links:[]},
  ultrarare:{name:'UltraRare',category:'COLLEZIONISMO / CATALOGO DIGITALE',image:'assets/ultrarare.jpeg',description:'Un catalogo dedicato alle carte Pokémon. Ricerca, filtri, carte in evidenza e dettagli della collezione si incontrano in un’esperienza dinamica, costruita intorno alla passione per il collezionismo.',links:[]},
- noto:{name:'Politicamente corretto',category:'MUSICA / RELEASE LANDING',image:'assets/noto.jpeg',description:'Una pagina per l’uscita di Politicamente corretto di Noto Dri. La copertina diventa il centro dell’identità visiva, mentre i collegamenti portano direttamente al brano e ai canali dell’artista.',links:[{label:'Ascolta su Spotify ↗',url:'https://open.spotify.com/track/5yT05J6JAkHM3aswpbb13R'},{label:'Guarda su YouTube ↗',url:'https://youtu.be/PJrkbCk-tJw'}]}
+ noto:{name:'Politicamente corretto',category:'MUSICA / RELEASE LANDING',image:'assets/noto.jpeg',description:'Una pagina per l’uscita di Politicamente corretto di Noto Dri. La copertina diventa il centro dell’identità visiva, mentre i collegamenti portano direttamente al brano e ai canali dell’artista.',links:[{label:'Visita la pagina ↗',url:'https://politicamente-corretto.vercel.app/'}]}
 };
 projects.cinema.links=[{label:'Visita il sito ↗',url:'https://www.lightfocuscinema.com/'}];
 projects.ultrarare.links=[{label:'Visita il sito ↗',url:'https://www.ultrarareofficial.com/'}];
-projects.noto.links.unshift({label:'Visita la pagina ↗',url:'projects/noto/'});
 const dialog=document.querySelector('#project-dialog');
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
  const p=projects[button.dataset.open];
